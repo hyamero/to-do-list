@@ -1,0 +1,246 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap");
+
+
+* {
+  font-family: "Maven Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $bg;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $bg;
+    border-radius: 20px;
+    border: 0px solid orange;
+  }
+
+  overflow-y: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  height: 100vh;
+  background: darken($bg3, 3);
+}
+
+.App {
+  width: 65%;
+  background: $bg;
+  padding: 40px;
+  height: 80vh;
+  position: fixed;
+  bottom: 30px;
+
+  h6 {
+    font-size: 1.7em;
+    color: $dimWhite;
+    font-style: italic;
+  }
+}
+
+.container {
+  padding: 0 40px 0 0;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 25px;
+
+  .icon-home {
+    margin: auto 0;
+  }
+
+  h1,
+  .icon-home {
+    font-size: 2em;
+    padding: 5px;
+    color: $blue;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .icon-home {
+    font-size: 1.6em;
+  }
+}
+
+.task {
+  width: 100%;
+  background: $bg2;
+  margin-bottom: 2px;
+  position: relative;
+  border-radius: 4px;
+  height: 3.5rem;
+
+  &:hover {
+    background: lighten($bg2, 3);
+  }
+}
+
+.wrapper {
+  padding: 10px 10px 30px 20px;
+}
+
+.inTask {
+  .icon-check {
+    position: absolute;
+    top: 18px;
+    font-size: 0.65em;
+    padding: 3.5px;
+    border: 2.4px $dimWhite solid;
+    border-radius: 50%;
+    color: $bg2;
+
+    &:hover {
+      color: $dimWhite;
+      cursor: pointer;
+    }
+  }
+
+  .icon-star {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 1.2em;
+    color: $dimWhite;
+
+    &:hover {
+      color: $blue;
+      cursor: pointer;
+    }
+  }
+
+
+  h3 {
+    position: absolute;
+    left: 56px;
+    color: $white;
+    font-weight: 300;
+    font-size: 1em;
+  }
+}
+
+.task-update {
+  h3 {
+  font-size: 25px;
+  padding: 5px;
+  color: green;
+  font-weight: 500;
+  font-style: italic;
+  margin-left: 20rem;
+  top: 20px;
+  z-index: 9;
+}
+}
+
+.dueDate {
+  color: $blue;
+  display: flex;
+  position: absolute;
+  left: 55px;
+  top: 30px;
+
+  p,
+  .icon-calendar {
+    margin: auto 1.4px;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .icon-calendar {
+    font-size: 0.8em;
+  }
+}
+
+.addTaskHo:hover {
+  background: lighten($bg3, 3);
+}
+
+.addTask {
+  position: relative;
+
+  .input-task {
+    outline: none;
+    border: none;
+    background: $bg3;
+    // background: #fff;
+    color: $white;
+    padding: 20px 0px 20px 48px;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 10px;
+
+    &::placeholder {
+      color: $white;
+    }
+
+  }
+
+  .datePick {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 57px;
+    background: $bg3;
+    border: none;
+    outline: none;
+    color: $white;
+    font-size: 1em;
+    z-index: 20;
+    border-radius: 10px;
+    padding: 0 20px 0 10px;
+
+    &:hover {
+      background: lighten($bg3, 3);
+    }
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+  .icon-plus {
+    position: relative;
+    color: $dimWhite;
+    font-size: 1.4em;
+    top: 53px;
+    left: 15px;
+    cursor: pointer;
+  }
+
+  .icon-plus-circle {
+    border: 2.4px $dimWhite solid;
+    border-radius: 50%;
+    font-size: 1.1em;
+    color: $bg3;
+    cursor: pointer;
+
+    &:hover {
+      color: $dimWhite;
+    }
+  }
+}
+
+.taskParent {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+
