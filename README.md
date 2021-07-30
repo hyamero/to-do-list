@@ -1,5 +1,8 @@
-#to do list
+# to-do-list 📄
+![alt text](public/thumbnail.jpg)
+## Technologies used:
+- `React.js`
+- `SCSS`
 
-My very first react project
+Based on Microsoft's To Do
 
-This is a Microsoft To Do clone but worse
