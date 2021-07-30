@@ -1,5 +1,5 @@
 # to-do-list 📄
-![alt text](public/thumbnail.jpg)
+![alt text](public/thumbnail1.jpg)
 ## Technologies used:
 - `React.js`
 - `SCSS`
